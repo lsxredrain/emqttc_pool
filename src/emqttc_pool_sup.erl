@@ -56,6 +56,7 @@ init([]) ->
 config() ->
   {ok, Pools} = application:get_env(emqttc_pool, pools),
   Retries = application:get_env(emqttc_pool, retry, 20),
+  
   {Pools, Retries}.
 
 setup({Pools, Retries}) ->
