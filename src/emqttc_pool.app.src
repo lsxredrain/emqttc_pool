@@ -3,11 +3,22 @@
   {vsn, "0.0.0"},
   {registered, []},
   {mod, { emqttc_pool_app, []}},
-  {applications,
-   [kernel,
-    stdlib
-   ]},
-  {env,[]},
+              {applications,[kernel,stdlib]},
+              {env, [
+                     {retry, 20},
+                     {pools, [
+                      {epool1, [
+                          {size, 1},
+                          {max_overflow, 20},
+                          {host, "115.159.183.220"},
+                          {port, 1883}
+                          {client_id, "db1dsdfsdfads"},
+                          {username, "db1"},
+                          {password, "abc123"}
+                        ]}
+                    ]}
+                  ]
+              },
   {modules, []},
 
   {maintainers, []},
