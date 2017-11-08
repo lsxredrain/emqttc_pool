@@ -10,12 +10,12 @@
                      {retry, 20},
                      {pools, [
                       {epool1, [
-                          {size, 1},
+                          {size, 5},
                           {max_overflow, 20}],
                           [
                           {host, "115.159.183.220"},
                           {port, 1883},
-                          {client_id, "db1dsdfsdfads"},
+                          {client_id, integer_to_binary(erlang:phash2(os:timestamp()))},
                           {username, "db1"},
                           {password, "abc123"}
                         ]}
