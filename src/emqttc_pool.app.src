@@ -11,8 +11,7 @@
                      {pools, [
                       {epool1, [
                           {size, 1},
-                          {max_overflow, 20},
-                          ],
+                          {max_overflow, 20}],
                           [
                           {host, "115.159.183.220"},
                           {port, 1883},
